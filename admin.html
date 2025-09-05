@@ -160,7 +160,7 @@
         // --- 4. URL 생성 및 표시 ---
 
         // 현재 페이지의 URL을 기준으로 report.html의 절대 경로 생성
-        const reportUrl = new URL('report.html', window.location.href).href;
+        const reportUrl = new URL('index.html', window.location.href).href;
         const finalLink = `${reportUrl}?data=${encodedData}`;
 
         // 결과 영역을 화면에 표시하고 링크를 input 상자에 넣기
