@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 피부 유전자 분석 리포트</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* 폰트 및 전체 레이아웃 설정 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .report-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 헤더 디자인 */
+        header {
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #1a3a6e;
+            font-weight: 700;
+            font-size: 2em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #6c757d;
+        }
+
+        /* 사용자 정보 섹션 */
+        .user-info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+        .info-item { color: #495057; }
+        .info-item span {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #0d6efd;
+            display: block;
+        }
+
+        /* 섹션 제목 */
+        .section-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #1a3a6e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #0d6efd;
+            display: inline-block;
+        }
+        
+        /* 유전자 카드 디자인 */
+        .gene-card {
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            background: #fff;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+        }
+        .gene-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .card-header h3 {
+            margin: 0;
+            color: #1a3a6e;
+            font-size: 1.4em;
+        }
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+            color: #fff;
+        }
+        .status-badge.high { background-color: #dc3545; }
+        .status-badge.low { background-color: #0d6efd; }
+
+        .card-body {
+            padding: 20px;
+        }
+        .card-body h4 {
+            font-size: 1em;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            padding-left: 10px;
+            border-left: 3px solid #0d6efd;
+        }
+        .card-body p { margin: 5px 0 15px 13px; }
+        
+        /* 비교 바 시각화 */
+        .comparison-section p { margin: 5px 0; }
+        .bar-container {
+            width: 100%;
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+        .user-bar {
+            height: 100%;
+            background-color: #fd7e14;
+            border-radius: 10px;
+            position: absolute;
+        }
+        .peer-marker {
+            position: absolute;
+            top: -5px;
+            height: 30px;
+            width: 2px;
+            background-color: #343a40;
+        }
+        .peer-marker::after {
+            content: '평균';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            color: #343a40;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        /* 모달 창 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 12px;
+            position: relative;
+            animation: slide-down 0.4s ease-out;
+        }
+        @keyframes slide-down {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-button:hover, .close-button:focus {
+            color: black;
+        }
+
+        /* 카드 내 상세보기 버튼 */
+        .details-button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        .details-button:hover {
+            background-color: #5a6268;
+        }
+        
+        /* 종합 소견(요약) 스타일 */
+        .summary-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .summary-item {
+            flex: 1;
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .summary-item h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #1a3a6e;
+        }
+        .summary-item .status-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .summary-item .status-text.excellent { color: #0d6efd; } /* 매우 우수 (파랑) */
+        .summary-item .status-text.good { color: #198754; } /* 양호 (초록) */
+        .summary-item .status-text.needs-attention { color: #ffc107; } /* 관심 필요 (노랑) */
+        .summary-item .status-text.needs-focus { color: #dc3545; } /* 집중 관리 (빨강) */
+
+        .summary-item p {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="report-container">
+
+        <header>
+            <h1>개인 피부 유전자 분석 리포트</h1>
+            <p>당신의 유전자에 기반한 맞춤 피부 관리 솔루션</p>
+        </header>
+
+        <section class="user-info" id="userInfoSection">
+            </section>
+        
+        <section class="section" id="radarChartSection">
+            <h2 class="section-title">피부 유전자 프로필</h2>
+            <canvas id="radarChart"></canvas>
+        </section>
+
+        <section class="section" id="summaryTextSection">
+            </section>
+
+        <section class="section">
+            <h2 class="section-title">상세 분석 결과</h2>
+            <div id="detailedResultsSection">
+                </div>
+        </section>
+
+        <footer>
+            <p>본 리포트는 유전자 발현량 분석을 기반으로 한 참고 자료이며, 의학적 진단을 대체할 수 없습니다.</p>
+            <p id="reportDate"></p>
+        </footer>
+    </div>
+
+    <div id="geneModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <script src="js/report.js"></script>
+</body>
+</html>

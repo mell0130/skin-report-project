@@ -1,0 +1,321 @@
+{
+  "COL1A1": {
+    "name": "COL1A1",
+    "category": "노화",
+    "description": "피부 구조의 90%를 차지하는 1형 콜라겐 합성을 담당하여 피부 탄력과 견고성을 유지합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>1형 콜라겐의 알파-1 사슬을 만드는 유전자로, 섬유아세포에서 합성되어 피부 조직을 강화합니다. 노화가 진행되면 콜라겐 합성이 감소하고 분해 효소가 증가하여 피부 탄력이 저하되고 주름이 형성됩니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>펩타이드:</strong> 세포에 콜라겐 합성을 시작하라는 신호를 보내 1형 콜라겐 생합성을 직접 유도합니다. (근거 강도: 높음)</li><li><strong>비타민 C:</strong> 콜라겐 합성의 필수 보조 인자이며, 항산화 효과로 콜라겐 분해를 억제합니다. (근거 강도: 높음)</li><li><strong>컴파운드 K:</strong> 콜라겐 분해 효소(MMP-1)의 활성을 억제하여 콜라겐을 보호합니다. (근거 강도: 높음)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>디오디너리 펩타이드 세럼, 설화수 자음생 라인, APLB PDRN 비타민 C 크림</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [12.76, 13.74, 12.52, 12.24, 11.76],
+      "female": [10.23, 10.79, 11.26, 12.67, 15.07],
+      "maleStd": [2.19, 2.48, 7.37, 4.02, 2.97],
+      "femaleStd": [6.67, 8.28, 4.78, 4.31, 3.32]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "콜라겐 합성이 평균보다 높아 피부 탄력이 좋고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 탄력 관리를 위해 꾸준한 보습과 자외선 차단에 신경 써 주세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "콜라겐 합성이 평균보다 낮아 피부 탄력 저하와 주름 발생 가능성이 높습니다.",
+        "ingredients": "펩타이드, 비타민 C, 컴파운드 K, 솔잎 추출물",
+        "products": "디오디너리 펩타이드 세럼, 설화수 자음생 라인, APLB PDRN 비타민 C 크림",
+        "tips": "콜라겐 생성을 촉진하고 분해를 억제하는 제품을 사용하세요. 단백질 섭취와 규칙적인 운동도 도움이 됩니다."
+      }
+    }
+  },
+  "PINK1": {
+    "name": "PINK1",
+    "category": "노화",
+    "description": "손상된 미토콘드리아를 제거하는 '미토파지' 과정을 조절하여 세포 노화를 방지합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>손상된 미토콘드리아 외막에 축적되어 파킨(Parkin) 단백질을 활성화시키고, 손상된 미토콘드리아를 선택적으로 분해하는 자가포식(mitophagy) 과정을 유도하는 신호가 됩니다. 이 기능이 저하되면 세포 에너지 생산 효율이 떨어지고 노화가 가속화됩니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>아스타잔틴:</strong> 강력한 항산화 작용으로 산화 스트레스를 줄이고 미토파지를 간접적으로 활성화합니다. (근거 강도: 중간/추론)</li><li><strong>백미꽃 추출물:</strong> UVB로 손상된 세포에서 PINK1 경로를 활성화하는 직접적인 근거가 있습니다. (근거 강도: 높음)</li><li><strong>NAD+:</strong> 세포 에너지 대사를 개선하여 미토콘드리아 건강을 증진시키고 PINK1 경로를 간접 지원합니다. (근거 강도: 중간/추론)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>선분 에디터 아스타잔틴 캡슐 세럼, 더 후 비첩 자생 에센스</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [-0.15, 4.59, 4.29, 2.86, 2.31],
+      "female": [2.38, 2.94, 3.78, 4.18, 6.53],
+      "maleStd": [2.58, 6.14, 4.62, 5.38, 3.63],
+      "femaleStd": [3.69, 3.86, 4.29, 4.04, 6.20]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "미토콘드리아 자가포식 기능이 평균보다 높아 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 노화 방지를 위해 꾸준히 항산화 성분을 섭취하고 충분한 수면을 취하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "미토콘드리아 자가포식 기능이 평균보다 낮아 세포 노화가 가속화될 수 있습니다.",
+        "ingredients": "아스타잔틴, 백미꽃 추출물, NAD+, 레스베라트롤",
+        "products": "선분 에디터 아스타잔틴 캡슐 세럼, 더 후 비첩 자생 에센스",
+        "tips": "미토콘드리아를 활성화하고 항산화 효과를 내는 성분으로 피부 활력을 높여주세요."
+      }
+    }
+  },
+  "HAS2": {
+    "name": "HAS2",
+    "category": "노화",
+    "description": "피부의 주요 보습 인자인 히알루론산을 합성하여 피부를 촉촉하고 유연하게 유지합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>HAS2는 히알루론산 합성 효소 유전자입니다. 히알루론산은 자기 무게의 수백 배에 달하는 수분을 끌어당겨 피부를 촉촉하고 유연하게 유지하는 '수분 자석' 역할을 합니다. 노화나 자외선 노출은 HAS2 발현을 감소시켜 피부 건조와 노화의 주요 원인이 됩니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>피세아탄놀:</strong> SIRT1 경로를 매개로 HAS2 발현을 상향 조절합니다. (근거 강도: 높음)</li><li><strong>설퓨레틴:</strong> 자외선에 의해 감소된 HAS2 유전자 발현을 직접적으로 증가시킵니다. (근거 강도: 높음)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>네오젠 V.BIOME 라인, SCIRPUSOL® 함유 제품</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [11.04, 5.14, 11.82, 10.41, 7.21],
+      "female": [9.1, 10.71, 4.83, 13.91, 15.51],
+      "maleStd": [4.22, 8.86, 7.16, 7.21, 8.45],
+      "femaleStd": [8.51, 5.78, 11.47, 5.05, 4.24]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "히알루론산 합성 기능이 평균보다 높아 피부가 촉촉하고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 보습을 위해 수분을 유지하는 제품을 꾸준히 사용하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "히알루론산 합성 기능이 평균보다 낮아 피부 건조와 탄력 저하가 우려됩니다.",
+        "ingredients": "피세아탄놀, 설퓨레틴, 네오젠 V.BIOME 리포좀™",
+        "products": "네오젠 V.BIOME 라인, SCIRPUSOL® 함유 제품",
+        "tips": "히알루론산 합성을 촉진하는 성분으로 피부 속부터 수분을 채워주세요."
+      }
+    }
+  },
+  "MSN": {
+    "name": "MSN",
+    "category": "노화",
+    "description": "세포막과 세포 골격을 연결하여 세포 형태 유지 및 이동에 관여합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>Moesin(MSN)은 세포의 형태 유지, 이동, 신호 전달에 필수적인 역할을 합니다. 하지만 과발현될 경우 암세포의 증식 및 전이를 촉진할 수 있어 기능의 양면성을 가집니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>펩타이드 (카텔리시딘):</strong> 각질형성세포의 이동을 촉진하여 MSN의 기능과 상호 보완적인 역할을 할 수 있습니다. (근거 강도: 낮음/추론)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>현재 MSN을 직접 표적하는 화장품은 확인되지 않습니다.</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [3.5, 6.77, 5.93, 5.28, 6.8],
+      "female": [3.6, 5.13, 7.09, 7.29, 7.48],
+      "maleStd": [2.94, 4.86, 5.09, 2.77, 4.95],
+      "femaleStd": [3.57, 4.49, 4.26, 4.89, 5.46]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "세포 이동 기능이 평균보다 높아 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부의 건강한 균형을 위해 자극적인 성분 사용을 최소화하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "세포 이동 및 형태 유지 기능이 평균보다 낮아 피부 재생 능력 저하 가능성이 있습니다.",
+        "ingredients": "펩타이드(카텔리시딘)",
+        "products": "펩타이드 성분 함유 제품",
+        "tips": "피부 재생을 돕는 성분으로 세포 활력을 높이고 건강한 피부 환경을 조성하세요."
+      }
+    }
+  },
+  "MLANA": {
+    "name": "MLANA",
+    "category": "색소",
+    "description": "멜라닌을 생성하는 세포 소기관인 멜라노좀의 형성에 관여하여 피부 톤에 영향을 줍니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>멜라닌세포 발달의 마스터 조절자인 MITF에 의해 조절됩니다. MLANA의 발현 수준은 피부 톤과 색소 침착 경향에 영향을 미칩니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>레스베라트롤, EGCG:</strong> MITF 신호 경로를 억제하여 MLANA 발현을 간접적으로 감소시킬 수 있습니다. (근거 강도: 중간/추론)</li><li><strong>알부틴, 코직산:</strong> 주로 티로시나아제 효소 활성 억제하지만, MITF 경로에 영향을 주어 간접적으로 MLANA를 하향 조절할 수 있습니다. (근거 강도: 낮음/추론)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>유세린 안티-피그먼트 라인 (티아미돌), 더마코 코직산 젤</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [6.11, 2.22, 2.47, 2.19, -0.36],
+      "female": [5.3, 1.84, 0.56, 1.23, 0.93],
+      "maleStd": [6.15, 4.76, 3.97, 3.34, 4.91],
+      "femaleStd": [5.6, 3.45, 3.05, 3.3, 1.74]
+    },
+    "recommendation": {
+      "high": {
+        "status": "높음",
+        "message": "멜라닌 생성 유전자 발현이 평균보다 높아 색소 침착 가능성이 높습니다.",
+        "ingredients": "레스베라트롤, EGCG, 알부틴, 코직산, 트라넥사믹산",
+        "products": "유세린 안티-피그먼트 라인 (티아미돌), 더마코 코직산 젤",
+        "tips": "멜라닌 생성을 억제하는 성분으로 미백 관리를 하고, 자외선 차단제를 꼼꼼히 바르세요."
+      },
+      "low": {
+        "status": "낮음",
+        "message": "멜라닌 생성 유전자 발현이 평균보다 낮아 피부 톤이 맑고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "자외선 차단을 꾸준히 하여 피부 색소 침착을 예방하세요."
+      }
+    }
+  },
+  "TFAP2A": {
+    "name": "TFAP2A",
+    "category": "색소",
+    "description": "멜라닌세포 발달 및 멜라닌 합성 관련 유전자의 발현을 조절하는 전사 인자입니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>전사 인자 AP-2α를 코딩하는 유전자로, MITF와 함께 멜라닌세포의 분화 및 멜라닌 합성에 중요한 역할을 합니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>레티노이드:</strong> retinoic acid가 AP-2 (TFAP2A) 발현/활성에 영향을 준다는 보고가 있어, TFAP2A의 전사 억제제 역할을 할 수 있습니다. (근거 강도: 간접적/추론)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>레틴-A와 같은 처방용 레티노이드 제품</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [7.61, 8.8, 9.89, 9.67, 8.12],
+      "female": [7.11, 7.62, 8.69, 7.1, 8.49],
+      "maleStd": [3.65, 6.13, 5.35, 3.55, 3.95],
+      "femaleStd": [3.91, 2.99, 6.59, 6.76, 3.43]
+    },
+    "recommendation": {
+      "high": {
+        "status": "높음",
+        "message": "멜라닌 생성 조절 기능이 평균보다 높아 색소 침착 가능성이 높습니다.",
+        "ingredients": "레티노이드",
+        "products": "레틴-A와 같은 처방용 레티노이드 제품",
+        "tips": "멜라닌 생성 조절에 도움을 주는 성분으로 관리하고, 자외선 차단제를 꼼꼼히 바르세요."
+      },
+      "low": {
+        "status": "낮음",
+        "message": "멜라닌 생성 조절 기능이 평균보다 낮아 피부 톤이 맑고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "자외선 차단을 꾸준히 하여 피부 색소 침착을 예방하세요."
+      }
+    }
+  },
+  "SOD1": {
+    "name": "SOD1",
+    "category": "색소",
+    "description": "활성산소를 제거하는 핵심 항산화 효소를 만들어 자외선으로부터 피부를 보호합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>활성산소를 산소와 과산화수소로 분해하여 세포 손상을 방지합니다. 이 기능은 자외선으로 인한 멜라닌 생성을 억제하고 광노화를 예방하는 데 중요합니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>레스베라트롤, EGCG:</strong> SOD1 mRNA 발현 및 총 활성을 증가시켜 항산화 방어력을 높입니다. (근거 강도: 높음)</li><li><strong>비타민 C:</strong> 강력한 항산화제로 SOD1의 수준 및 활성을 보조합니다. (근거 강도: 중간)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>리쏘드 SOD 앰플, 칼름 리바이벌 레스베라트롤 세럼</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [-2.42, -3.52, -1.88, -3.54, -3.77],
+      "female": [-1.75, -2.58, -2.2, -2.27, -2.81],
+      "maleStd": [3.33, 3.45, 3.63, 2.69, 2.23],
+      "femaleStd": [3.56, 3, 3.75, 4.03, 2.09]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "항산화 방어 기능이 평균보다 높아 피부가 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 건강을 위해 항산화 성분 관리를 꾸준히 하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "항산화 방어 기능이 평균보다 낮아 색소 침착과 노화가 가속화될 수 있습니다.",
+        "ingredients": "레스베라트롤, EGCG, 비타민 C, 아멘토플라본",
+        "products": "리쏘드 SOD 앰플, 칼름 리바이벌 레스베라트롤 세럼",
+        "tips": "항산화 성분을 충분히 섭취하고 바르는 것으로 피부 방어력을 높여주세요."
+      }
+    }
+  },
+  "VDR": {
+    "name": "VDR",
+    "category": "색소",
+    "description": "비타민 D 수용체로, 피부 분화, 멜라닌 생성, 면역 반응 등 다양한 기능에 관여합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>활성 비타민 D와 결합하여 유전자 전사를 조절하는 핵 수용체입니다. 멜라닌 생성을 조절하고 피부 장벽 단백질(필라그린) 발현을 증가시킵니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>비타민 D3 (Cholecalciferol):</strong> VDR 신호를 직접 활성화하고, 국소 도포 시 VDR 단백질 양을 증가시킬 수 있습니다. (근거 강도: 중간)</li><li><strong>레티노이드:</strong> VDR과 상호작용하는 RXR 수용체에 작용하여 VDR 신호에 교차 영향을 줍니다. (근거 강도: 중간/추론)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>스킨 오소리티 D3+ 세럼, 더마 이 비타민 D 페이셜 크림</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [2.98, 4.28, 3.49, 5.77, 5.24],
+      "female": [2.33, 3.15, 3.45, 3.66, 3.16],
+      "maleStd": [3.5, 4.72, 2.07, 3.22, 6.6],
+      "femaleStd": [6.79, 1.85, 5.66, 4.88, 1.83]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "비타민 D 수용체 활성화가 평균보다 높아 피부가 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 건강을 위해 비타민 D3 성분 관리를 꾸준히 하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "비타민 D 수용체 활성화가 평균보다 낮아 피부 면역 및 색소 침착에 취약할 수 있습니다.",
+        "ingredients": "비타민 D3, 레티노이드",
+        "products": "스킨 오소리티 D3+ 세럼",
+        "tips": "비타민 D3를 통해 피부 면역력을 높이고, 자외선 차단을 꼼꼼히 하세요."
+      }
+    }
+  },
+  "FLG": {
+    "name": "FLG",
+    "category": "건조",
+    "description": "피부 장벽의 구조적 핵심인 필라그린 단백질을 생성하여 천연 보습 인자를 만듭니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>필라그린은 각질층 세포 내 케라틴 섬유를 단단하게 묶어 피부 장벽을 형성하고, 분해되면서 천연 보습 인자(NMF)를 생성합니다. FLG 기능 이상은 아토피 피부염, 건성 피부의 주요 원인입니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>니아신아마이드:</strong> 필라그린, 케라틴, 세라마이드 발현을 증가시켜 피부 장벽을 강화합니다. (근거 강도: 높음)</li><li><strong>우레아:</strong> 필라그린 유전자 발현을 유도하고 NMF를 보충하여 장벽 기능을 개선합니다. (근거 강도: 높음)</li><li><strong>아피게닌:</strong> 필라그린 mRNA 및 단백질 발현을 증가시킨다는 직접적인 보고가 있습니다. (근거 강도: 높음)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>닥터지 필라그린 라인, 제로이드 리체닉 크림 유레아 10%, 아누아 피치 77% 나이아신 토너</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [-2.69, -1.32, 0.39, -4.97, -5.31],
+      "female": [-0.97, -1.2, -1.89, -1.85, 0.18],
+      "maleStd": [5.33, 7.72, 5.03, 3.24, 3.22],
+      "femaleStd": [7.27, 5.16, 4.15, 4.24, 4.19]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "필라그린 생성이 평균보다 높아 피부 장벽이 튼튼하고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 장벽을 건강하게 유지하기 위해 자극적인 성분 사용을 피하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "필라그린 생성이 평균보다 낮아 피부 장벽이 약화되고 건조할 수 있습니다.",
+        "ingredients": "니아신아마이드, 우레아, 아피게닌, 비피다발효용해물",
+        "products": "닥터지 필라그린 크림, 제로이드 리체닉 크림 유레아 10%, 아누아 피치 77% 나이아신 토너",
+        "tips": "피부 장벽을 강화하고 천연 보습 인자를 채워주는 보습 관리가 필요합니다."
+      }
+    }
+  },
+  "AQP3": {
+    "name": "AQP3",
+    "category": "건조",
+    "description": "세포막에 존재하는 수분 통로로, 물과 글리세롤을 수송하여 피부 수분 균형을 조절합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>피부 표피층의 세포막에 존재하는 막단백질로, 피부의 수분 균형, 탄력, 장벽 회복에 필수적입니다. AQP3 부족 시 피부 탄력 저하 및 장벽 기능 회복이 지연됩니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>글리세릴글루코사이드:</strong> AQP3 mRNA 및 단백질 수준을 증가시켜 수분 채널을 활성화합니다. (근거 강도: 높음)</li><li><strong>병풀추출물 (아시아티코사이드):</strong> 세포 및 동물 연구에서 AQP3를 증가시킨다는 보고가 있습니다. (근거 강도: 높음)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>유세린 아쿠아포린 액티브 크림, 스킨1004 마다가스카르 센텔라 라인</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [2.22, 4.74, 4.94, 2.97, 4.93],
+      "female": [5.11, 4.37, 3.1, 4.71, 2.76],
+      "maleStd": [4.83, 5.63, 4.59, 3.05, 4.65],
+      "femaleStd": [5.19, 3.54, 3.39, 4.95, 3.61]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "수분 통로 기능이 평균보다 높아 피부가 촉촉하고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 수분 유지를 위해 보습 관리를 꾸준히 하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "수분 통로 기능이 평균보다 낮아 피부 건조와 탄력 저하가 우려됩니다.",
+        "ingredients": "글리세릴글루코사이드, 병풀추출물, 설퓨레틴, 레티노이드, 글리세롤",
+        "products": "유세린 아쿠아포린 액티브 크림, 스킨1004 마다가스카르 센텔라 라인",
+        "tips": "수분 통로를 활성화하는 성분으로 피부 속부터 수분을 채워주세요."
+      }
+    }
+  },
+  "SPINK5": {
+    "name": "SPINK5",
+    "category": "건조",
+    "description": "각질 탈락에 관여하는 효소의 활성을 억제하여 피부 장벽 기능을 유지합니다.",
+    "details_html": "<h4 class='font-bold text-lg mb-2 text-[#3D405B]'>유전자 역할 및 경로</h4><p class='mb-4'>LEKTI라는 단백질을 만들어 각질층의 세린 프로테아제 효소 활성을 억제합니다. 이 기능은 각질이 과도하게 떨어져 나가는 것을 막고 피부 장벽을 보호합니다. 유전자 돌연변이는 네더튼 증후군과 같은 심각한 피부 질환을 유발합니다.</p><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>조절 성분 및 기전</h4><ul class='list-disc list-inside space-y-2 mb-4'><li><strong>디오스메틴:</strong> SPINK5 유전자 프로모터 활성을 증가시켜 아토피 유사 병변을 개선합니다. (근거 강도: 높음)</li><li><strong>컴파운드 K:</strong> UVB 손상 모델에서 SPINK5 발현을 증가시켜 피부 장벽 기능을 개선합니다. (근거 강도: 높음)</li></ul><h4 class='font-bold text-lg mb-2 text-[#3D405B]'>시중 제품 예시</h4><p>아모레퍼시픽 설화수 라인</p>",
+    "peerData": {
+      "labels": ["20대", "30대", "40대", "50대", "60대"],
+      "male": [-0.28, 1.26, 2.15, -0.44, 0.24],
+      "female": [0.36, 1.71, -0.32, 0.62, 3.25],
+      "maleStd": [4.51, 5.2, 5.97, 2.34, 3.89],
+      "femaleStd": [6.34, 5.53, 3.69, 4.35, 4.49]
+    },
+    "recommendation": {
+      "low": {
+        "status": "높음",
+        "message": "각질 탈락 조절 기능이 평균보다 높아 피부 장벽이 튼튼하고 건강한 상태입니다.",
+        "ingredients": "해당 없음",
+        "products": "현재의 관리법을 유지하세요.",
+        "tips": "피부 장벽을 건강하게 유지하기 위해 자극적인 성분 사용을 피하세요."
+      },
+      "high": {
+        "status": "낮음",
+        "message": "각질 탈락 조절 기능이 평균보다 낮아 피부 장벽이 손상될 가능성이 있습니다.",
+        "ingredients": "디오스메틴, 컴파운드 K",
+        "products": "아모레퍼시픽 설화수 라인",
+        "tips": "각질층 보호를 위해 피부 장벽 강화 성분이 포함된 제품을 사용하세요."
+      }
+    }
+  }
+}

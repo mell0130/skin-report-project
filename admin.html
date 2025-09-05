@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리포트 생성기 (관리자용)</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+        .container { border: 1px solid #ccc; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        h1, h2 { text-align: center; }
+        label { font-weight: bold; display: inline-block; min-width: 80px; }
+        .gene-label { min-width: 150px; }
+        input[type="text"], input[type="number"], select { width: 200px; padding: 5px; margin-bottom: 10px; }
+        fieldset { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; }
+        legend { font-weight: bold; font-size: 1.2em; color: #0056b3; }
+        .section-toggle { margin-bottom: 20px; text-align: center; }
+        .hidden { display: none; }
+        button { width: 100%; padding: 12px; font-size: 16px; background-color: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; }
+        #result { margin-top: 20px; }
+        #report-link { width: 100%; padding: 8px; background-color: #f0f0f0; border: 1px solid #ccc; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <h1>피부 분석 리포트 생성기</h1>
+
+    <div class="container">
+        <h2>1. 기본 정보 입력</h2>
+        <label for="userName">사용자 이름:</label>
+        <input type="text" id="userName" placeholder="예: 홍길동"><br>
+        <label for="userAge">나이:</label>
+        <input type="number" id="userAge" placeholder="예: 30"><br>
+        <label for="userGender">성별:</label>
+        <select id="userGender">
+            <option value="female">여성</option>
+            <option value="male">남성</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h2>2. 분석 항목 선택</h2>
+        <div class="section-toggle">
+            <input type="checkbox" id="toggleAging" onchange="toggleSection('aging')"> <label for="toggleAging" style="min-width: auto;">피부 노화</label>
+            <input type="checkbox" id="toggleDryness" onchange="toggleSection('dryness')"> <label for="toggleDryness" style="min-width: auto;">피부 건조</label>
+            <input type="checkbox" id="togglePigmentation" onchange="toggleSection('pigmentation')"> <label for="togglePigmentation" style="min-width: auto;">색소 침착</label>
+        </div>
+    </div>
+
+    <form id="biomarker-form">
+        <fieldset id="aging-section" class="hidden">
+            <legend>피부 노화</legend>
+            <label class="gene-label" for="COL1A1_week0">COL1A1:</label>
+            <input type="number" id="COL1A1_week0" placeholder="0주차">
+            <input type="number" id="COL1A1_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="PINK1_week0">PINK1:</label>
+            <input type="number" id="PINK1_week0" placeholder="0주차">
+            <input type="number" id="PINK1_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="HAS2_week0">HAS2:</label>
+            <input type="number" id="HAS2_week0" placeholder="0주차">
+            <input type="number" id="HAS2_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="MSN_week0">MSN:</label>
+            <input type="number" id="MSN_week0" placeholder="0주차">
+            <input type="number" id="MSN_week4" placeholder="4주차"><br>
+        </fieldset>
+
+        <fieldset id="dryness-section" class="hidden">
+            <legend>피부 건조</legend>
+            <label class="gene-label" for="FLG_week0">FLG:</label>
+            <input type="number" id="FLG_week0" placeholder="0주차">
+            <input type="number" id="FLG_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="AQP3_week0">AQP3:</label>
+            <input type="number" id="AQP3_week0" placeholder="0주차">
+            <input type="number" id="AQP3_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="SPINK5_week0">SPINK5:</label>
+            <input type="number" id="SPINK5_week0" placeholder="0주차">
+            <input type="number" id="SPINK5_week4" placeholder="4주차"><br>
+        </fieldset>
+
+        <fieldset id="pigmentation-section" class="hidden">
+            <legend>색소 침착</legend>
+            <label class="gene-label" for="MLANA_week0">MLANA:</label>
+            <input type="number" id="MLANA_week0" placeholder="0주차">
+            <input type="number" id="MLANA_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="TFAP2A_week0">TFAP2A:</label>
+            <input type="number" id="TFAP2A_week0" placeholder="0주차">
+            <input type="number" id="TFAP2A_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="SOD1_week0">SOD1:</label>
+            <input type="number" id="SOD1_week0" placeholder="0주차">
+            <input type="number" id="SOD1_week4" placeholder="4주차"><br>
+            <label class="gene-label" for="VDR_week0">VDR:</label>
+            <input type="number" id="VDR_week0" placeholder="0주차">
+            <input type="number" id="VDR_week4" placeholder="4주차"><br>
+        </fieldset>
+    </form>
+    <br>
+    <button onclick="generateReportLink()">리포트 링크 생성</button>
+
+    <div id="result" class="hidden">
+        <h3>생성된 리포트 링크</h3>
+        <input type="text" id="report-link" readonly>
+        <p>위 링크를 복사하여 사용자에게 전달하세요.</p>
+    </div>
+
+    <script>
+    function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId + '-section');
+        const checkbox = document.getElementById('toggle' + sectionId.charAt(0).toUpperCase() + sectionId.slice(1));
+        section.classList.toggle('hidden', !checkbox.checked);
+    }
+
+    function generateReportLink() {
+        // --- 1. 데이터 수집 ---
+
+        // 분석할 모든 유전자 목록
+        const allGenes = [
+            'COL1A1', 'PINK1', 'HAS2', 'MSN', // 노화
+            'FLG', 'AQP3', 'SPINK5',         // 건조
+            'MLANA', 'TFAP2A', 'SOD1', 'VDR'  // 색소
+        ];
+
+        // 기본 사용자 정보 수집
+        const userInfo = {
+            name: document.getElementById('userName').value,
+            age: parseInt(document.getElementById('userAge').value, 10),
+            gender: document.getElementById('userGender').value
+        };
+
+        // 측정된 유전자 값 수집
+        const analysisData = {};
+        allGenes.forEach(gene => {
+            const week0Input = document.getElementById(`${gene}_week0`);
+            const week4Input = document.getElementById(`${gene}_week4`);
+
+            // 체크박스로 활성화된 섹션의 유전자 값만 수집
+            if (week0Input && week4Input) {
+                const week0 = week0Input.value ? parseFloat(week0Input.value) : null;
+                const week4 = week4Input.value ? parseFloat(week4Input.value) : null;
+
+                // 둘 중 하나라도 값이 있는 경우에만 데이터에 추가
+                if (week0Input.value || week4Input.value) {
+                    analysisData[gene] = { week0, week4 };
+                }
+            }
+        });
+
+        // --- 2. 데이터 구조화 ---
+
+        // 최종적으로 URL에 담길 데이터 객체
+        const reportData = {
+            user: userInfo,
+            analysis: analysisData,
+            createdAt: new Date().toISOString() // 생성 날짜 추가
+        };
+
+        // --- 3. 데이터 변환 (인코딩) ---
+
+        // 객체를 JSON 문자열로 변환
+        const jsonString = JSON.stringify(reportData);
+        // JSON 문자열을 Base64로 인코딩
+        const encodedData = btoa(unescape(encodeURIComponent(jsonString)));
+
+        // --- 4. URL 생성 및 표시 ---
+
+        // 현재 페이지의 URL을 기준으로 report.html의 절대 경로 생성
+        const reportUrl = new URL('report.html', window.location.href).href;
+        const finalLink = `${reportUrl}?data=${encodedData}`;
+
+        // 결과 영역을 화면에 표시하고 링크를 input 상자에 넣기
+        document.getElementById('result').classList.remove('hidden');
+        const reportLinkInput = document.getElementById('report-link');
+        reportLinkInput.value = finalLink;
+        reportLinkInput.select(); // 사용자가 쉽게 복사할 수 있도록 텍스트를 선택 상태로 만듦
+
+        console.log("생성된 데이터:", reportData); // 개발자용: 데이터가 잘 만들어졌는지 콘솔에서 확인
+    }
+</script>
+
+</body>
+</html>
